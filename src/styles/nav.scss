@@ -12,10 +12,10 @@ nav {
 }
 .navLinks,
 li {
+  margin-right: 10px;
   color: white;
-  width: 15%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   list-style: none;
 }
