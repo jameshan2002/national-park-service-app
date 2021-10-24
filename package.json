@@ -21,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +44,9 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "node-sass": "^6.0.1",
     "sass": "^1.43.3"
-  }
+  },
+  "homepage": "http://jameshan2002.github.io/national-park-service-app"
 }
