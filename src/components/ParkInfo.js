@@ -22,7 +22,7 @@ function ParkInfo({ match }) {
       `https://developer.nps.gov/api/v1/parks?${match.params.id}&api_key=Dte9gvfWpb7italce4QVy54ICLbGKHU1v0P48y2o`
     );
     const item = await fetchItem.json();
-    console.log(item.data[0]);
+
     setInfo(item.data[0]);
   };
 
@@ -155,10 +155,17 @@ function ParkInfo({ match }) {
               <a href={item.url} target="_blank" rel="noreferrer">
                 {item.title}
               </a>
+              {/* <img src={item.images[0].url} alt="landscape" /> */}
               <h4>Status: {item.status}</h4>
-              <p>{item.description.slice(0, 140)}...</p>
+              <p>{item.description.slice(0, 150)}...</p>
             </div>
           ))}
+
+          {/* {webcam.data.images.map((imgs) => (
+            <div>
+              <img src={imgs.url} alt="landscape" />
+            </div>
+          ))} */}
         </div>
       );
     }

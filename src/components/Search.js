@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 // Main front of the website, searches the park by using the activity category from API.
 function Search() {
@@ -23,20 +24,23 @@ function Search() {
   }
 
   return (
-    <div className="Search">
-      <h1>Search the park by finding your activities!</h1>
-
-      <select onChange={(event) => handleCategories(event.target.value)}>
-        <option value="default" hidden>
-          Choose your activities!
-        </option>
-        {items.map((item) => (
-          <option key={item.id} value={item.id}>
-            {item.name}
+    <body className="back">
+      <div className="Search">
+        <Fade top cascade>
+          <h1>Search the park by finding your activities!</h1>
+        </Fade>
+        <select onChange={(event) => handleCategories(event.target.value)}>
+          <option value="default" hidden>
+            Choose your activities!
           </option>
-        ))}
-      </select>
-    </div>
+          {items.map((item) => (
+            <option key={item.id} value={item.id}>
+              {item.name}
+            </option>
+          ))}
+        </select>
+      </div>
+    </body>
   );
 }
 

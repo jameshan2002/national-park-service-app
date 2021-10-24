@@ -7,15 +7,25 @@ nav {
   color: white;
   h4 {
     color: white;
+    font-size: 1rem;
     font-weight: 600;
   }
 }
 .navLinks,
 li {
-  margin-right: 10px;
+  margin-right: 1.4rem;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: end;
+  align-items: center;
   list-style: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+@media (max-width: 480px) {
+  nav {
+    h4 {
+      margin-left: 20px;
+    }
+  }
 }

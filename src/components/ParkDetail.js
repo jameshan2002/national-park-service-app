@@ -31,7 +31,7 @@ function ParkDetail({ match }) {
             >
               <h3 key={item.parkCode}>{item.name}</h3>
             </Link>
-            <p key={item.states}>State: {item.states}</p>
+            <p key={item.states}>State: {item.states.slice(0, 39)}</p>
             <hr></hr>
           </div>
         ))}

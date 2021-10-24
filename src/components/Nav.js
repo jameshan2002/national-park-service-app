@@ -4,7 +4,7 @@ function Nav() {
   return (
     <nav>
       <Link to="/national-park-service-app" style={{ textDecoration: "none" }}>
-        <h4 className="logo">Park Service</h4>
+        <h4 className="logo">Park Finder</h4>
       </Link>
       <ul className="navLinks">
         <Link
