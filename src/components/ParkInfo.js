@@ -9,7 +9,9 @@ function ParkInfo({ match }) {
     contacts: { emailAddresses: [], phoneNumbers: [] },
     operatingHours: [],
   });
-  const [webcam, setWebcam] = useState({ data: [] });
+  const [webcam, setWebcam] = useState({
+    data: [{ images: [], description: "" }],
+  });
 
   useEffect(() => {
     fetchItem();
@@ -150,27 +152,37 @@ function ParkInfo({ match }) {
       return (
         <div>
           <h3>Total of {webcam.data.length} webcams available</h3>
-          {webcam.data.map((item) => (
-            <div className="webcams" key={item.id}>
-              <a href={item.url} target="_blank" rel="noreferrer">
-                {item.title}
-              </a>
-              {/* <img src={item.images[0].url} alt="landscape" /> */}
-              <h4>Status: {item.status}</h4>
-              <p>{item.description.slice(0, 150)}...</p>
-            </div>
-          ))}
-
-          {/* {webcam.data.images.map((imgs) => (
-            <div>
-              <img src={imgs.url} alt="landscape" />
-            </div>
-          ))} */}
+          <div className="webcamAll">
+            {webcam.data.map((item) => (
+              <div className="webcams" key={item.id}>
+                {checkPictures(item)}
+                <a href={item.url} target="_blank" rel="noreferrer">
+                  {item.title}
+                </a>
+                <h4>Status: {item.status}</h4>
+                <p>{item.description.slice(0, 150)}...</p>
+              </div>
+            ))}
+          </div>
         </div>
       );
     }
   };
-
+  const checkPictures = (item) => {
+    if (item.images.length === 0) {
+      return <h3 className="noPicture">No picture available</h3>;
+    } else {
+      return (
+        <div>
+          {item.images.map((imgs) => (
+            <div className="pictureContainer">
+              <img src={imgs.url} alt="landscape" className="webPictures" />
+            </div>
+          ))}
+        </div>
+      );
+    }
+  };
   return (
     <div className="ParkInfo">
       {imageReader()}

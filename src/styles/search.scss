@@ -1,21 +1,21 @@
 .back {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  font-family: "Playfair Display", serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../images/background.jpg");
 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-y: hidden;
-  min-height: 93.2vh;
+  min-height: 100vh;
 }
 
 .Search {
   text-align: center;
   margin-top: 200px;
   h1 {
-    font-weight: 300;
-    font-size: 2rem;
-
+    font-weight: 600;
+    font-size: 4rem;
     color: white;
   }
 }
@@ -23,9 +23,9 @@
 select {
   width: 35%;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
-  padding: 8px;
+  padding: 9px;
   text-align: center;
   option {
     text-align: left;

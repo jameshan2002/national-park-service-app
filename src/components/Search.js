@@ -27,7 +27,7 @@ function Search() {
     <body className="back">
       <div className="Search">
         <Fade top cascade>
-          <h1>Search the park by finding your activities!</h1>
+          <h1>Explore America's National Parks.</h1>
         </Fade>
         <select onChange={(event) => handleCategories(event.target.value)}>
           <option value="default" hidden>
