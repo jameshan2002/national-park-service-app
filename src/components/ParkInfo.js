@@ -1,3 +1,6 @@
+//All information about the selected park from ParkDetail.java
+
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 
 function ParkInfo({ match }) {
@@ -34,9 +37,7 @@ function ParkInfo({ match }) {
       `https://developer.nps.gov/api/v1/webcams?${match.params.id}&api_key=Dte9gvfWpb7italce4QVy54ICLbGKHU1v0P48y2o`
     );
     const cams = await fetchWebcam.json();
-    // console.log(cams.data);
     setWebcam(cams);
-    console.log(cams);
   };
 
   //Reads the image from the API
@@ -44,7 +45,12 @@ function ParkInfo({ match }) {
     return (
       <div>
         {info.images.slice(0, 1).map((item) => (
-          <img className="ImageBack" src={item.url} alt={"sceneary"} />
+          <img
+            className="ImageBack"
+            src={item.url}
+            alt={"sceneary"}
+            key={item.url}
+          />
         ))}
       </div>
     );
@@ -56,7 +62,7 @@ function ParkInfo({ match }) {
       <div>
         <h3>Address</h3>
         {info.addresses.slice(0, 1).map((item) => (
-          <p className="Desc" key={item.type}>
+          <p className="Desc" key={item.line1}>
             {item.line1}
             <br />
             {item.line2} {item.line3} {item.city}, {item.stateCode}{" "}
@@ -73,7 +79,7 @@ function ParkInfo({ match }) {
       <div>
         <h3>Open Time</h3>
         {info.operatingHours.slice(0, 1).map((item) => (
-          <div className="Desc">
+          <div className="Desc" key={item.standardHours.monday}>
             <p>Monday: {item.standardHours.monday}</p>
             <p>Tuesday: {item.standardHours.tuesday}</p>
             <p>Wednesday: {item.standardHours.wednesday}</p>
@@ -94,10 +100,10 @@ function ParkInfo({ match }) {
         <h3>Contact</h3>
         <div className="Desc">
           {info.contacts.emailAddresses.map((item) => (
-            <p>Email: {item.emailAddress}</p>
+            <p key={item.emailAddress}>Email: {item.emailAddress}</p>
           ))}
           {info.contacts.phoneNumbers.map((item) => (
-            <p>
+            <p key={item.phoneNumber}>
               {item.type}: {item.phoneNumber}
             </p>
           ))}
@@ -114,7 +120,7 @@ function ParkInfo({ match }) {
           <h3>Enterance Fees</h3>
           <div className="Desc">
             {info.entranceFees.map((item) => (
-              <p>
+              <p key={item.title}>
                 {item.title} : ${item.cost}
                 {/* <br /> {item.description} */}
               </p>
@@ -133,7 +139,7 @@ function ParkInfo({ match }) {
           <h3>Enterance Passes</h3>
           <div className="Desc">
             {info.entrancePasses.map((item) => (
-              <p>
+              <p key={item.title}>
                 {item.title} : ${item.cost}
                 {/* <br /> {item.description} */}
               </p>
@@ -154,7 +160,7 @@ function ParkInfo({ match }) {
           <h3>Total of {webcam.data.length} webcams available</h3>
           <div className="webcamAll">
             {webcam.data.map((item) => (
-              <div className="webcams" key={item.id}>
+              <div className="webcams" key={item.title}>
                 {checkPictures(item)}
                 <a href={item.url} target="_blank" rel="noreferrer">
                   {item.title}
@@ -168,6 +174,8 @@ function ParkInfo({ match }) {
       );
     }
   };
+
+  //Finds pictures for webcam POV.
   const checkPictures = (item) => {
     if (item.images.length === 0) {
       return <h3 className="noPicture">No picture available</h3>;
@@ -175,7 +183,7 @@ function ParkInfo({ match }) {
       return (
         <div>
           {item.images.map((imgs) => (
-            <div className="pictureContainer">
+            <div className="pictureContainer" key={imgs.url}>
               <img src={imgs.url} alt="landscape" className="webPictures" />
             </div>
           ))}
@@ -186,6 +194,7 @@ function ParkInfo({ match }) {
   return (
     <div className="ParkInfo">
       {imageReader()}
+
       <div className="BasicInfo">
         <h1 className="ParkName">{info.fullName}</h1>
         <p className="Desc">{info.description}</p>
@@ -197,6 +206,7 @@ function ParkInfo({ match }) {
         {entranceFeeReader()}
         {entrancePassReader()}
       </div>
+
       <div className="WebcamInfo">
         <h1>Webcams</h1>
         {checkWebcam()}

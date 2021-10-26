@@ -1,3 +1,5 @@
+//Naviagtion. displays at the top of the website always.
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,10 +24,10 @@ function Nav() {
           <li>Search</li>
         </Link> */}
         <Link
-          to="/national-park-service-app/contact"
+          to="/national-park-service-app/about"
           style={{ textDecoration: "none" }}
         >
-          <li>CONTACT</li>
+          <li>ABOUT</li>
         </Link>
       </ul>
     </nav>

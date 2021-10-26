@@ -49,7 +49,6 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "node-sass": "^6.0.1",
     "sass": "^1.43.3"
   },
   "homepage": "http://jameshan2002.github.io/national-park-service-app"

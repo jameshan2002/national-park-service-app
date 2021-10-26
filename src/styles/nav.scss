@@ -18,7 +18,7 @@ nav {
 .navLinks,
 li {
   margin-right: 1.4rem;
-  color: white;
+  color: rgb(223, 223, 223);
   display: flex;
   justify-content: end;
   align-items: center;
@@ -30,6 +30,10 @@ li {
   nav {
     .logo {
       margin-left: 20px;
+      font-size: 0.8rem;
+    }
+    li {
+      font-size: 0.8rem;
     }
   }
 }

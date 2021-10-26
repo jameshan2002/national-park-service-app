@@ -1,3 +1,6 @@
+//Gives deep view of all the parks releated to the selected activity by user.
+
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -8,19 +11,21 @@ function ParkDetail({ match }) {
     fetchItem();
   }, []);
 
+  // Returns the API of /activities/parks, which is all the parks releated to activity user selected.
   const fetchItem = async () => {
     const fetchItem = await fetch(
       `https://developer.nps.gov/api/v1/activities/parks?id=${match.params.id}&api_key=Dte9gvfWpb7italce4QVy54ICLbGKHU1v0P48y2o`
     );
     const item = await fetchItem.json();
     setPark(item.data[0]);
-    console.log(item.data[0]);
   };
 
   return (
     <div className="ParkDetail">
+      {/* Title */}
       <h1>{park.name}</h1>
       <p className="found">Total {park.parks.length} parks found</p>
+      {/* Finds all parks related to the activity */}
       <div className="Container">
         {park.parks.map((item) => (
           <div className="parkEach" key={item.parkCode}>

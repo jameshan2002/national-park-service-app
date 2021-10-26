@@ -1,5 +1,4 @@
 .back {
-  font-family: "Playfair Display", serif;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../images/background.jpg");
 
@@ -11,6 +10,7 @@
 }
 
 .Search {
+  font-family: "Playfair Display", serif;
   text-align: center;
   margin-top: 200px;
   h1 {
@@ -25,28 +25,95 @@ select {
   font-size: 1rem;
   border-radius: 20px;
   border: none;
-  padding: 9px;
+  padding: 10px;
   text-align: center;
   option {
     text-align: left;
   }
 }
 
-.credit {
-  margin-top: 50px;
-  font-weight: 300;
-  font-size: 0.8rem;
+.Recommended {
+  background-color: white;
+  color: black;
+  margin: 300px auto auto auto;
+  padding: 90px 200px 90px 200px;
+  h2 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 2.2rem;
+  }
+  h4 {
+    padding: 0px;
+    margin: 0px auto 50px auto;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+}
+
+.RecommendPark {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.RecommendParkEach {
+  width: 450px;
+  //background-color: rgb(247, 247, 247);
+  margin: 0 auto 90px auto;
+  //padding: 10px;
+  h3 {
+    text-decoration-line: none;
+    list-style: none;
+    color: rgb(184, 154, 112);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 auto 0 auto;
+  }
+  h4 {
+    margin: 5px auto 0 auto;
+    font-weight: 600;
+    color: black;
+  }
+  .RecommendParkState {
+    margin: 0px auto 5px auto;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+}
+
+.RecommendImage {
+  margin: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
 }
 
 @media (max-width: 780px) {
   select {
-    width: 85%;
+    width: 80%;
   }
   .Search {
     margin-top: 300px;
     h1 {
-      font-size: 1.9rem;
+      font-size: 2.5rem;
     }
+  }
+  .Recommended {
+    padding: 40px 15px 20px 15px;
+    .RecommendedTitle {
+      text-align: center;
+      h2 {
+        font-size: 1.8rem;
+      }
+      h4 {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .RecommendParkEach {
+    width: 90%;
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 480px) {
@@ -59,6 +126,14 @@ select {
     h1 {
       padding: 5px;
       font-size: 1.4rem;
+    }
+  }
+  .RecommendedTitle {
+    h2 {
+      font-size: 1rem;
+    }
+    h4 {
+      font-size: 0rem;
     }
   }
 }

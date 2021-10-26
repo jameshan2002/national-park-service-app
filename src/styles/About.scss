@@ -1,0 +1,63 @@
+.About {
+  padding: 10px 100px 100px 100px;
+  margin-top: 50px;
+  min-height: calc(100vh - 308px);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.texts {
+  max-width: 800px;
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    margin: 0 auto;
+  }
+  h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: 40px 0 0 0;
+    line-height: 2rem;
+  }
+}
+
+.aboutPicture {
+  margin: 0;
+  object-fit: cover;
+  width: 30%;
+  height: 550px;
+}
+@media (max-width: 480px) {
+  .About {
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap-reverse;
+  }
+  .texts {
+    padding: 10px 30px 30px 30px;
+    h1 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      margin: 30px 0 0 0;
+    }
+  }
+  .aboutPicture {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+  }
+}

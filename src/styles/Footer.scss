@@ -1,0 +1,30 @@
+.Footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+
+  background-color: black;
+  padding: 30px 100px 30px 100px;
+  margin: 0;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: white;
+    padding: 10px;
+  }
+  .FooterInformation {
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    text-decoration-line: none;
+  }
+}
+@media (max-width: 780px) {
+  .Footer {
+    padding: 25px;
+  }
+}
