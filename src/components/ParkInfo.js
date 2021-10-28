@@ -17,6 +17,7 @@ function ParkInfo({ match }) {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0); //Opens at the top of the page
     fetchItem();
     fetchWebcam();
   }, []);
