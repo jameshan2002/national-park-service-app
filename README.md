@@ -8,6 +8,7 @@ National Park API with React and Sass.
 I have made a deployable web app using the National Park Service API allowing users to have the best National Park experience possible with an intuitive, easy-to-navigate interface.
 
 
+
 ## List of Tools Used
 - National Park Service API
 - Javascript
@@ -15,10 +16,12 @@ I have made a deployable web app using the National Park Service API allowing us
 - Sass
 
 
+
 ## List of Packages Used
 - React-Reveal
 - React-Router
 - Font-Awesome
+
 
 
 ## Required Features
@@ -29,6 +32,7 @@ I have made a deployable web app using the National Park Service API allowing us
 2. Have a feature on the web app where visitors can: 
    - Retrieve data from park web cams based on which National Park(s) the user selects. 
    - Specifically, this feature should be able to display the non-streaming images collected from park web cams so a visitor can view them with ease.
+
 
 
 ## Extra Features
