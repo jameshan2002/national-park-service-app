@@ -9,7 +9,7 @@ I have made a deployable web app using the National Park Service API allowing us
 
 
 
-## List of Tools Used
+### List of Tools Used
 - National Park Service API
 - Javascript
 - React JS
@@ -17,7 +17,7 @@ I have made a deployable web app using the National Park Service API allowing us
 
 
 
-## List of Packages Used
+### List of Packages Used
 - React-Reveal
 - React-Router
 - Font-Awesome
