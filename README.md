@@ -6,9 +6,10 @@ National Park Website using National Park API with React and Sass.
 
 ## Project Details
 I have made a deployable web app using the National Park Service API allowing users to have the best National Park experience possible with an intuitive, easy-to-navigate interface.
+
+
+## Picture
 ![image](https://user-images.githubusercontent.com/77949696/161839924-207903fa-050e-4874-9db0-bc91ee3db134.png)
-
-
 
 ### List of Tools Used
 - National Park Service API
