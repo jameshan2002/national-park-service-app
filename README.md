@@ -1,7 +1,7 @@
 # National Park Service App
 National Park Website using National Park API with React and Sass.
 
-- [View Demo](https://jameshan2002.github.io/national-park-service-app/)
+- [View Demo](https://notjameshan.github.io/national-park-service-app/)
 
 
 ## Project Details
